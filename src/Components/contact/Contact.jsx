@@ -15,7 +15,7 @@ const Contact = () => {
         <input type="text" placeholder="Your Email Id"/>
         </div>
         <div className="contact_content">
-        <textarea name="" id="" cols="50" rows="5" placeholder="Enter message"></textarea>
+        <textarea name="" id="" rows="5" placeholder="Enter message"></textarea>
         </div>
         <div className="contact_content">
         <a className="btn btn-primary" href="#">Send</a>
