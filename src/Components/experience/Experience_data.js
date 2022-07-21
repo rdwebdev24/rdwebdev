@@ -32,7 +32,7 @@ const experience = [
      {
           id:7,
           name:'C/C++',
-          exp:10
+          exp:30
      },
      {
           id:8,
