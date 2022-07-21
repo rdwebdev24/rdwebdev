@@ -1,0 +1,148 @@
+
+header{
+     height: 100vh;
+     overflow: hidden;
+     clip-path: polygon(0 60%, 0 0, 100% 0, 100% 60%, 50% 85%);
+     /* background-color: var(--color-bg-variant); */
+     background-image: linear-gradient(to left bottom, #2c2c6c, #28295f, #252652, #222245, #1f1f38);
+}
+
+
+.header_container{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     grid-template-columns: 1fr 1fr;
+     text-align: center;
+     height: 100%;
+     position: relative;
+     
+}
+.header_content h4{
+     position: absolute;
+     top: 18%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+/* ======== TYPING ANIMATION  ========== */
+.header_content h5 {
+     overflow: hidden; /* Ensures the content is not revealed until the animation */
+     border-right: .15em solid orange; /* The typwriter cursor */
+     white-space: nowrap; /* Keeps the content on a single line */
+     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+     letter-spacing: .15em; /* Adjust as needed */
+     animation: 
+       typing 5s steps(17, end) infinite ,
+       blink-caret .75s step-end infinite;
+   }
+   
+   /* The typing effect */
+   @keyframes typing {
+     0%{
+          width: 0;
+     }
+     50%{
+          width: 100%;
+     }
+     100%{
+          width: 0;
+     }
+   }
+   
+   /* The typewriter cursor effect */
+   @keyframes blink-caret {
+     from, to { border-color: transparent }
+     50% { border-color: orange; }
+   }
+/* ========= TYPING ANIMATION ENDS ========= */
+
+/* =========== CTA =============== */
+
+.cta{
+     margin-top: 2.5rem;
+     display: flex;
+     gap: 1.2rem;
+     justify-content: center;
+}
+
+/* ============== EXPANDABLE NAME  ================== */
+#rohit {
+     position: absolute;
+     top: 30%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     margin: 0;
+     padding: 0;
+     font-size: 8rem;
+     color: transparent;
+     text-transform: uppercase;
+}
+
+#rohit span:nth-child(1) {
+     position: absolute;
+     top: 0;
+     left: 0;
+     color: var(--color-white);
+     transition: 0.5s;
+     clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+#rohit:hover span:nth-child(1) {
+     transform: translateY(-18px);
+}
+
+#rohit span:nth-child(2) {
+     position: absolute;
+     top: 0;
+     left: 0;
+     color: var(--color-white);
+     transition: 0.5s;
+     clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+#rohit:hover span:nth-child(2) {
+     transform: translateY(18px);
+}
+
+#rohit span:nth-child(3) {
+     position: absolute;
+     top: 50%;
+     left: 0;
+     transform: translateY(-50%) scale(0);
+     width: 91%;
+     color: #fff;
+     background: var(--color-bg-var);
+     letter-spacing: 0.6em;
+     font-size: 0.25em;
+     font-weight: 500;
+     text-align: center;
+     padding-left: 20px;
+     margin-left: 5px;
+     transition: 0.5s;
+}
+
+#rohit:hover span:nth-child(3) {
+     transform: translateY(-50%) scale(1);
+}
+/* =============== EXPANDABLE NAME ENDS ================= */
+
+
+
+/*=================  MEDIA QUERIES (MEDIUM DEVICEC )================*/
+@media screen and (max-width:1024px){
+     header{
+          clip-path: polygon(0 70%, 0 0, 100% 0, 100% 70%, 50% 80%);
+     }
+}
+/*=================  MEDIA QUERIES (SMALLER DEVICEC )================*/
+@media screen and (max-width:600px){
+     header{
+          height: 100vh;
+      }
+      .header_social,
+      .scroll_down{
+          display: none;
+      }
+}
+
+

@@ -1,0 +1,74 @@
+#contact{
+     position: relative;
+}
+.container_contact{
+     background-color: var(--color-bg-variant);
+     max-width: 40rem;
+     padding: 3rem 2rem;
+     border-radius: 1rem;
+     display: flex;
+     justify-content: start;
+     align-items: flex-start;
+     flex-direction: column;
+
+}
+.contact_content{
+     margin: 0.5rem;
+}
+.contact_content input,.contact_content textarea{
+     padding: 1rem 4rem 1rem 0.8rem;
+     border-radius: 0.5rem;
+}
+#contact h2 , #contact h5{
+     margin-bottom: 1rem;
+}
+::placeholder{
+     font-size: 1.5rem;
+}
+
+#Social_icons{
+     font-size: 2rem;
+     position: absolute;
+     transform: rotateZ(90deg);
+     top: 75%;
+     left: 10%;
+}
+#Social_icons a{
+   padding: 1.5rem;
+}
+#Social_icons a i{
+     transform: rotateZ(-90deg);
+}
+#ScrollUp{
+     font-size: 1.8rem;
+     position: absolute;
+     transform: rotateZ(90deg);
+     top: 75%;
+     right: 15%;
+}
+/*=================  MEDIA QUERIES (MEDIUM DEVICEC )================*/
+@media screen and (max-width:1024px){
+     #contact{
+          padding-top: 1.5rem;
+     }
+     
+     
+}
+/*=================  MEDIA QUERIES (SMALLER DEVICEC )================*/
+@media screen and (max-width:768px){
+     #Social_icons{
+          left: 0%;
+     }
+     #ScrollUp{
+          right: 0%;
+       }
+}
+/*=================  MEDIA QUERIES (Extra SMALLER DEVICEC )================*/
+@media screen and (max-width:600px){
+     #Social_icons{
+         display: none;
+     }
+     #ScrollUp{
+         display: none;
+       }
+}
