@@ -15,7 +15,7 @@ const Projects = () => {
         <h2>Projects</h2>
         <div className="container container_project">
           {projectData.map((item)=>{
-            const {id,name,img,giturl,liveDemourl} = item
+            const {id,name,img,gitUrl,liveDemourl} = item
             return (
               <article key={id} className="project_item">
               <div className="project_item_image">
@@ -23,7 +23,7 @@ const Projects = () => {
               </div>
               <h3>{name}</h3>
               <div className="project_item_ct">
-                <a href={giturl} className='btn'>Github</a>
+                <a href={gitUrl} className='btn' target="_blank">Github</a>
                 <a href={liveDemourl} className='btn btn-primary'>Live demo</a>
               </div>
             </article>
