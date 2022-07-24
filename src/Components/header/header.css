@@ -24,6 +24,12 @@ header{
      left: 50%;
      transform: translate(-50%, -50%);
 }
+.hello span{
+     opacity: 0;
+     color: transparent;
+     display: inline-block;
+     position: relative;
+}
 /* ======== TYPING ANIMATION  ========== */
 .header_content h5 {
      overflow: hidden; /* Ensures the content is not revealed until the animation */

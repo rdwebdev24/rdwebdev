@@ -3,13 +3,14 @@ import { useEffect } from "react";
 import { useState } from "react";
 import about1 from "../../assets/about1.jpg"
 import AboutData from './About_data.js'
-
+import anime from "animejs";
 import './about.css'
+import { useRef } from "react";
 const About = () => {
   const [job, SetJob] = useState(AboutData);
   const [value, setValue] = useState(0);
-
   const { title,id,info } = job[value];
+ 
   return (
     <section id="about">
       <h5>Get To Know</h5>
@@ -24,7 +25,7 @@ const About = () => {
         {/* info container */}
         <div className="infoContainer">
           <h1>{title}</h1>
-          <div className="info">
+          <div className="info ">
             {info}
           </div>
         </div>
