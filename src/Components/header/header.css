@@ -2,12 +2,10 @@
 header{
      height: 100vh;
      overflow: hidden;
-     /* clip-path: polygon(0 60%, 0 0, 100% 0, 100% 60%, 50% 85%); */
-     /* background-color: var(--color-bg-variant); */
 }
 
 .clipath{
-     z-index: 10;
+     z-index: 2;
      background-image: linear-gradient(to left bottom, #2c2c6c, #28295f, #252652, #222245, #1f1f38);
      clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 99%, 0 0);
      animation: animate 2s ease-in-out forwards;
@@ -18,12 +16,15 @@ header{
 
 @keyframes animate {
      0%{
+          z-index:2;
           clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 99%, 0 0);
      }
      50%{
+          z-index:2;
           clip-path: polygon(28% 0, 43% 66%, 100% 100%, 0 99%, 0 0);
      }
      100%{
+          z-index:0;
           clip-path: polygon(0 0, 29% 77%, 100% 100%, 0 99%, 0 0);
      }
 }
@@ -102,7 +103,10 @@ header{
      color: transparent;
      text-transform: uppercase;
 }
-
+:root{
+     --animationtime:2s;
+     --animationDelay:2s
+}
 #rohit span:nth-child(1) {
      position: absolute;
      top: 0;
@@ -110,10 +114,27 @@ header{
      color: var(--color-white);
      transition: 0.5s;
      clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+     animation: expandName1 var(--animationtime) var(--animationDelay) ease-in-out;
 }
 
 #rohit:hover span:nth-child(1) {
      transform: translateY(-18px);
+}
+
+@keyframes expandName1 {
+     0%{transform: translateY(0);}
+     70%{transform: translateY(-18px);}
+     100%{transform: translateY(0);}
+}
+@keyframes expandName2 {
+     0%{ transform: translateY(0);}
+     70%{ transform: translateY(18px);}
+     100%{ transform: translateY(0);}
+}
+@keyframes expandName3 {
+     0%{ transform: translateY(-50%) scale(0);}
+     70%{ transform: translateY(-50%) scale(1);}
+     100%{ transform: translateY(-50%) scale(0);}
 }
 
 #rohit span:nth-child(2) {
@@ -123,6 +144,7 @@ header{
      color: var(--color-white);
      transition: 0.5s;
      clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+     animation: expandName2 var(--animationtime) var(--animationDelay) ease-in-out;
 }
 
 #rohit:hover span:nth-child(2) {
@@ -144,11 +166,15 @@ header{
      padding-left: 20px;
      margin-left: 5px;
      transition: 0.5s;
+     transform-origin: center;
+     animation: expandName3 var(--animationtime) var(--animationDelay) ease-in-out;
 }
 
 #rohit:hover span:nth-child(3) {
      transform: translateY(-50%) scale(1);
 }
+
+
 /* =============== EXPANDABLE NAME ENDS ================= */
 
 
