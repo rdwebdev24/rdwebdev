@@ -14,11 +14,6 @@ const AboutData = [
           title:"Website",
           info:" some of them are : E-commerce , Hotel Booking , 2D game websites some with the use of React etc...",
      },
-     {
-          id:4,
-          title:"Project",
-          info:"I build so many Projects that my reaction is when i see my previous website'oh! when i made this😂',",
-     },
 ]
 
 export default AboutData
