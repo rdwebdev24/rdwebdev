@@ -21,12 +21,12 @@ const experience = [
      },
      {
           id:5,
-          name:'React',
+          name:'React/React-redux',
           exp:40
      },
      {
           id:6,
-          name:'Python',
+          name:'jQuery',
           exp:40
      },
      {
@@ -41,7 +41,7 @@ const experience = [
      },
      {
           id:9,
-          name:'jQuery',
+          name:'Python',
           exp:10
      },
     
