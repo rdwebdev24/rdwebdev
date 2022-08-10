@@ -44,6 +44,16 @@ const experience = [
           name:'Python',
           exp:10
      },
+     {
+          id:10,
+          name:'DSA',
+          exp:20
+     },
+     {
+          id:11,
+          name:'Git/Github',
+          exp:30
+     },
     
 ]
 
