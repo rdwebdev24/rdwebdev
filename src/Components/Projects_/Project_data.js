@@ -2,45 +2,44 @@ const ProjectData = [
      {
           id:1,
           name:"Chrome Extension",
-          gitUrl:"https://github.com/rdwebdev24?tab=repositories",
+          gitUrl:"https://github.com/rdwebdev24/Chrome_extension",
           liveDemourl:"",
-          img:'https://clickup.com/landing/images/chrome-extension/v2/clickup-chrome.png',
+          img:'assets/clickup-chrome_1.png',
      },
      {
           id:2,
           name:"2d Games",
           gitUrl:"https://github.com/rdwebdev24?tab=repositories",
           liveDemourl:"",
-          img:'../../assets/collage.png',
+          img:'assets/game.png',
      },
      {
           id:3,
           name:"E-Commerce Website",
-          gitUrl:"",
-          liveDemourl:"",
-          img:"../../assets/collage2.png",
+          gitUrl:"https://github.com/rdwebdev24/E-commerce",
+          liveDemourl:"https://e-commerce-omega-ten.vercel.app/",
+          img:"assets/collage2_1.png",
      },
      {
           id:4,
           name:"Student Engagement Detection",
           gitUrl:"https://github.com/rdwebdev24?tab=repositories",
           liveDemourl:"",
-          img:"../../assets/student.jpg",
+          img:"assets/student2.jpg",
      },
      {
           id:5,
-          name:"React Web Apps ",
-          gitUrl:"https://github.com/rdwebdev24?tab=repositories",
-          liveDemourl:"",
-          img:"../../assets/whether.jpg",
+          name:"Sarthi.app",
+          gitUrl:"https://github.com/rdwebdev24/Sarthi",
+          liveDemourl:"https://sarthi-three.vercel.app/",
+          img:"assets/sarthi_1.jpeg",
      },
-     {
-          id:6,
-          name:"My Tunes",
-          gitUrl:"https://github.com/rdwebdev24?tab=repositories",
-          liveDemourl:"",
-          img:"../../assets/tunes.png",
-     },
+     
 ]
 
 export default ProjectData
+
+
+
+
+

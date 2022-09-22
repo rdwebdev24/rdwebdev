@@ -1,7 +1,6 @@
 import React from "react"
 import { useEffect } from "react";
 import { useState } from "react";
-import about1 from "../../assets/about1.jpg"
 import AboutData from './About_data.js'
 import anime from "animejs";
 import './about.css'

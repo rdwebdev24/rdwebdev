@@ -1,11 +1,6 @@
 import React from "react";
 import CTA from "./CTA";
-import ME from "../../assets/me3.png";
 import "./header.css";
-import { useState } from "react";
-import { useRef } from "react";
-import { useEffect } from "react";
-import anime from 'animejs';
 const Header = () => {
 
   return (

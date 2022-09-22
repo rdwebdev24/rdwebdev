@@ -26,7 +26,7 @@ box-shadow: 12px 12px 24px #1a1a30, -12px -12px 24px #242440; */
 }
 .experience_container > div:hover{
      background: transparent;
-     border-color: var(--color-bg-variant);
+     border-color: #58ff4d;
 }
 
 .experience_container > div h3{
