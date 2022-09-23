@@ -4,6 +4,7 @@ import CTA from "./CTA";
 import "./header.css";
 import FOG from 'vanta/dist/vanta.fog.min'
 import anime from 'animejs/lib/anime.es.js';
+import { Parallax } from 'react-parallax';
 
 const Header = () => {
 
@@ -64,7 +65,7 @@ const Header = () => {
 
 
   return (
-    
+    <Parallax className='image'  bgImage="https://images.unsplash.com/photo-1550684376-efcbd6e3f031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmxhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"  strength={200}>
     <div>
     <div ref={myRef} className="clipath"></div>
       <header  id="Home">
@@ -86,6 +87,7 @@ const Header = () => {
         </div>
       </header>
     </div>
+    </Parallax>
   );
 };
 

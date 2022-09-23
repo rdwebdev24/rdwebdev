@@ -6,7 +6,7 @@ import {AiOutlineRight} from 'react-icons/ai'
 import {AiOutlineLeft} from 'react-icons/ai'
 import {BsBoxArrowInUpRight} from 'react-icons/bs'
 import { useState } from 'react'
-
+import { Parallax } from 'react-parallax'
 const Projects = () => {
 
   const NextArrow = ({ onClick }) => {
@@ -77,6 +77,8 @@ const handleLeave = (idx)=>{
 
 
   return (
+    <Parallax className='image' bgImage='/assets/bg2.png' strength={200}>
+
       <section id='project'>
         <h5>My Work</h5>
         <h2>Projects</h2>
@@ -95,6 +97,7 @@ const handleLeave = (idx)=>{
          
         </div>
       </section>
+    </Parallax>
   )
 }
 

@@ -2,20 +2,20 @@ import React from "react";
 import { useState } from "react";
 import "./experience.css";
 import expData from "./Experience_data.js";
-import { CircularProgressbar,buildStyles } from 'react-circular-progressbar';
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import Slider from "react-slick";
-import 'react-circular-progressbar/dist/styles.css';
-import {AiOutlineRight} from 'react-icons/ai'
-import {AiOutlineLeft} from 'react-icons/ai'
+import "react-circular-progressbar/dist/styles.css";
+import { AiOutlineRight } from "react-icons/ai";
+import { AiOutlineLeft } from "react-icons/ai";
 import { useEffect } from "react";
-import anime from 'animejs/lib/anime.es.js';
+import anime from "animejs/lib/anime.es.js";
+import { Parallax } from "react-parallax";
 
 const Experience = () => {
+  const [imageIndex, setImageIndex] = useState(0);
+  const [slides, setSlides] = useState(3);
+  const [Progerss, setProgress] = useState(0);
 
-  const [imageIndex,setImageIndex] = useState(0)
-  const [slides,setSlides] = useState(3);
-  const [Progerss,setProgress] = useState(0);
-  
   const NextArrow = ({ onClick }) => {
     return (
       <div className="arrow next" onClick={onClick}>
@@ -23,8 +23,6 @@ const Experience = () => {
       </div>
     );
   };
-
-
 
   const PrevArrow = ({ onClick }) => {
     return (
@@ -35,56 +33,46 @@ const Experience = () => {
   };
 
   const skill = {
-    width:'90vw',
-    height:'100%',
-    margin:'auto',
-    textAlign:'center'
-  }
+    width: "90vw",
+    height: "100%",
+    margin: "auto",
+    textAlign: "center",
+  };
 
   const settings = {
-    Infinite:true,
-    speed:300,
-    slidesToShow:slides,
-    centerMode:true,
-    centerPadding:0,
-    nextArrow:<NextArrow/>,
-    prevArrow:<PrevArrow/>,
-    beforeChange:(current,next) => setImageIndex(next)
-}
+    Infinite: true,
+    speed: 300,
+    slidesToShow: slides,
+    centerMode: true,
+    centerPadding: 0,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    beforeChange: (current, next) => setImageIndex(next),
+  };
 
-useEffect(()=>{
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth <= 600) {
+        setSlides(2);
+      }
+      if (window.innerWidth > 600) {
+        setSlides(3);
+      }
+    });
 
-  window.addEventListener('resize',()=>{
-    if(window.innerWidth<=600){
-      setSlides(2)
-    }
-    if(window.innerWidth>600){
-      setSlides(3)
-    }
-  })
-
-  expData.forEach((item,idx)=>{
-      setProgress(item.exp)
-  })
-  
-  // anime({
-  //   targets: '#hello span',
-  //   bottom:'0px',
-  //   color:'#fff',
-  //   opacity:1,
-  //   delay:2000,
-  //   delay: anime.stagger(100)
-  // });
-})
-
-
+    expData.forEach((item, idx) => {
+      setProgress(item.exp);
+    });
+  });
 
   return (
-    <section id="experience">
-
-    {/* SLIDING CAROUSEL */}
     
-    {/* <div style={skill} className="skills_cont">
+    <Parallax className='image'  bgImage="/assets/bg1.png"  strength={200}>
+       
+    <section id="experience">
+      {/* SLIDING CAROUSEL */}
+
+      {/* <div style={skill} className="skills_cont">
       <Slider {...settings}>
       {expData.map((item,idx)=>{
         return (
@@ -109,15 +97,13 @@ useEffect(()=>{
       </Slider>
     </div> */}
 
-
-
       <h5>what Skilld i Have</h5>
       <h2>My Experience</h2>
       <div className="container experience_container">
-      <div className="experience_frontend">
-      <h3>Frontend Developemnt</h3>
-      <div className="experience_content">
-      {expData.map((item, index) => {
+        <div className="experience_frontend">
+          <h3>Frontend Developemnt</h3>
+          <div className="experience_content">
+            {expData.map((item, index) => {
               const { id, name, exp } = item;
               if (index < 4) {
                 return (
@@ -167,6 +153,8 @@ useEffect(()=>{
         </div>
       </div>
     </section>
+    </Parallax>
+
   );
 };
 

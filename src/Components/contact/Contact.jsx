@@ -1,9 +1,11 @@
 import React from "react";
 import "./contact.css";
 import Social_icon from "./Social_icon";
-
+import { Parallax } from "react-parallax";
 const Contact = () => {
   return (
+    <Parallax className="image" strength={200} bgImage="/assets/bg1.png">
+
     <section id="contact">
         <h2 >Let's Talk</h2>
         <h5>Send Email</h5>
@@ -24,6 +26,7 @@ const Contact = () => {
       <Social_icon/>
       <a id="ScrollUp" href="#">Scroll Up</a>
     </section>
+    </Parallax>
   );
 };
 

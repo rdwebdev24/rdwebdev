@@ -5,6 +5,8 @@ import AboutData from "./About_data.js";
 import anime from "animejs";
 import "./about.css";
 import { useRef } from "react";
+import { Parallax } from 'react-parallax';
+
 const About = () => {
   const parallex = useRef()
   const [job, SetJob] = useState(AboutData);
@@ -13,8 +15,8 @@ const About = () => {
 
 
   return (
+    <Parallax className='image'  bgImage="https://media.istockphoto.com/photos/black-brick-wall-picture-id1324275828?b=1&k=20&m=1324275828&s=170667a&w=0&h=ZM6xFbD4UCIMSJGvWY8emce_faY6qgnPQSb4Yq4GRv8="  strength={200}>
     <section id="about">
-
       <h5>Get To Know</h5>
       <h2>About Me</h2>
       <div className="container about_container">
@@ -33,6 +35,7 @@ const About = () => {
       </div>
       </div>
     </section>
+    </Parallax>
   );
 };
 
