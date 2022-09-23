@@ -3,9 +3,14 @@ import { useState,useEffect,useRef } from "react";
 import CTA from "./CTA";
 import "./header.css";
 import FOG from 'vanta/dist/vanta.fog.min'
+import anime from 'animejs/lib/anime.es.js';
+
 const Header = () => {
+
   const [vantaEffect, setVantaEffect] = useState(null)
   const myRef = useRef(null)
+  const hello = useRef(null)
+  
   useEffect(() => {
     if (!vantaEffect) {
       setVantaEffect(FOG({
@@ -28,16 +33,46 @@ const Header = () => {
 
 
 
+  useEffect(()=>{
+    var str = hello.current.innerText;
+    var char = str.split("");
+    for(let i=0; i<char.length; i++){
+      char[i] = `<span class="hello_char">${char[i]}</span>`
+    }
+    let html = '';
+    for(let i=0; i<char.length; i++){
+      html += char[i]
+    }
+    hello.current.innerHTML = html
+
+    const t1 = setTimeout(() => {
+      anime({
+        targets: '#hello span',
+        bottom:'0px',
+        color:'#fff',
+        opacity:1,
+        delay:2000,
+        delay: anime.stagger(100)
+      });
+    }, 1000);
+
+      return ()=>{
+        clearTimeout(t1);
+      }
+  })
+
+
+
   return (
     
     <div>
     <div ref={myRef} className="clipath"></div>
-      <header id="Home">
+      <header  id="Home">
         <div className="container header_container">
           <img className="profile_photu" src="/assets/profile.gif" alt="" />
           <div className="header_content">
-            <h4 id="hello">Hello I'm</h4>
-            <h2 id="rohit">
+            <h4 ref={hello} id="hello">Hello I'm</h4>
+            <h2  id="rohit">
                Rohit
                <span>rohit</span>
                <span>rohit</span>

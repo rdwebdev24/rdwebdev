@@ -12,7 +12,7 @@ const About = () => {
  
   return (
     <section id="about">
-      <h5>Get To Know</h5>
+      {/* <h5>Get To Know</h5>
       <h2>About Me</h2>
       <div className="container about_container">
       <div className="About_container">
@@ -21,17 +21,18 @@ const About = () => {
                return <button onClick={()=>setValue(index)} key={index}>{item.title}</button>
           })}
         </div>
-        {/* info container */}
         <div className="infoContainer">
           <h1>{title}</h1>
           <div className="info ">
             {info}
           </div>
         </div>
-        
-        {/* info container ends */}
       </div>
-      </div>
+      </div> */}
+
+
+
+      
     </section>
   );
 };

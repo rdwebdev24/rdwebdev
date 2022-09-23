@@ -4,7 +4,6 @@ header {
 }
 .clipath {
   z-index: 999;
-  background: linear-gradient(320deg, #58ff4d 0%, #171819 100%);
   background: linear-gradient(
     345deg,
     #383a3cd9 14%,
@@ -17,6 +16,7 @@ header {
   height: 100vh;
   width: 100%;
 }
+
 
 .profile_photu {
   position: absolute;
@@ -54,10 +54,9 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.hello span {
+ .hello_char{
+  bottom: -30px;
   opacity: 0;
-  color: transparent;
-  display: inline-block;
   position: relative;
 }
 /* ======== TYPING ANIMATION  ========== */

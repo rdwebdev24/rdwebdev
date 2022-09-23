@@ -48,7 +48,9 @@ box-shadow: 12px 12px 24px #1a1a30, -12px -12px 24px #242440; */
      display: flex;
      gap: 1rem;
 }
-
+.circular_bar{
+     width: 200px !important;
+}
 /*=================  MEDIA QUERIES (MEDIUM DEVICEC )================*/
 @media screen and (max-width:1024px){
    
@@ -67,16 +69,33 @@ box-shadow: 12px 12px 24px #1a1a30, -12px -12px 24px #242440; */
  }
  /*=================  MEDIA QUERIES (SMALLER DEVICEC )================*/
  @media screen and (max-width:600px){
-     .experience_container{
-          gap: 1rem;
+      .experience_container{
+           gap: 1rem;
+          }
+          .experience_container > div{
+               width: 100%;
+               padding: 2rem 1rem;
+          }
+          .experience_content{
+               display: flex;
+               flex-wrap: wrap;
+          }
+         
+}
+     
+/*=================  MEDIA QUERIES (SMALLER DEVICEC )================*/
+
+ @media screen and (max-width:768px){
+     .circular_bar{
+          width: 150px !important;
      }
-     .experience_container > div{
-          width: 100%;
-          padding: 2rem 1rem;
-     }
-     .experience_content{
-          display: flex;
-          flex-wrap: wrap;
+ }
+ 
+/*=================  MEDIA QUERIES (SMALLER DEVICEC )================*/
+
+ @media screen and (max-width:425px){
+     .circular_bar{
+          width: 120px !important;
      }
  }
  

@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import './project.css'
 import projectData from './Project_data.js'
 import Slider from 'react-slick'
-import {FaArrowRight} from 'react-icons/fa'
-import {FaArrowLeft} from 'react-icons/fa'
+import {AiOutlineRight} from 'react-icons/ai'
+import {AiOutlineLeft} from 'react-icons/ai'
 import {BsBoxArrowInUpRight} from 'react-icons/bs'
 import { useState } from 'react'
 
@@ -12,7 +12,7 @@ const Projects = () => {
   const NextArrow = ({ onClick }) => {
     return (
       <div className="arrow next" onClick={onClick}>
-        <FaArrowRight />
+        <AiOutlineRight />
       </div>
     );
   };
@@ -20,7 +20,7 @@ const Projects = () => {
   const PrevArrow = ({ onClick }) => {
     return (
       <div className="arrow prev" onClick={onClick}>
-        <FaArrowLeft />
+        <AiOutlineLeft />
       </div>
     );
   };
@@ -36,7 +36,6 @@ const Projects = () => {
       if(window.innerWidth>600){
         setSlides(3)
       }
-
     })
   })
   
@@ -84,7 +83,7 @@ const handleLeave = (idx)=>{
         <div className="Carousel">
           <Slider {...settings}>
           {projectData.map((item,idx)=>{
-              return <div className={idx==imageIndex?"slide activeSlide":"slide"}>
+              return <div className={idx==imageIndex?"slide activeSlide":"slide"} key={item.id}>
                 <img onMouseEnter={()=>handleEnter(idx)} onMouseLeave={()=>handleLeave(idx)} src={item.img} alt={item.img} className="slide_images"/>
                 <div onMouseEnter={()=>handleEnter(idx)} onMouseLeave={()=>handleLeave(idx)} style={idx==imageIndex?style:{}} className="showDetail">
                   <a href={item.gitUrl} target="_blank" className='btn btn-primary project_btn'><h3>Github</h3></a>
