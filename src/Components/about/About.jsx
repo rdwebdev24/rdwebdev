@@ -1,18 +1,21 @@
-import React from "react"
+import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import AboutData from './About_data.js'
+import AboutData from "./About_data.js";
 import anime from "animejs";
-import './about.css'
+import "./about.css";
 import { useRef } from "react";
 const About = () => {
+  const parallex = useRef()
   const [job, SetJob] = useState(AboutData);
   const [value, setValue] = useState(0);
-  const { title,id,info } = job[value];
- 
+  const { title, id, info } = job[value];
+
+
   return (
     <section id="about">
-      {/* <h5>Get To Know</h5>
+
+      <h5>Get To Know</h5>
       <h2>About Me</h2>
       <div className="container about_container">
       <div className="About_container">
@@ -28,11 +31,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      </div> */}
-
-
-
-      
+      </div>
     </section>
   );
 };

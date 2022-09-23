@@ -3,15 +3,6 @@
   margin-top: 5rem;
   
 }
-/* .container ,
- .About_container ,
-  .detailContainer,
-  .btnContainer,
-  .infoContainer{
-  border: 2px solid red;
-} */
-
-
 
 #About hr{
   margin: 10px 0;
@@ -23,6 +14,7 @@
    display: flex;
    justify-content: space-around;
 }
+
 
 .btnContainer {
    display: flex;

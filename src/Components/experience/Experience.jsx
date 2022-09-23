@@ -64,7 +64,6 @@ useEffect(()=>{
   })
 
   expData.forEach((item,idx)=>{
-    console.log(idx)
       setProgress(item.exp)
   })
   
