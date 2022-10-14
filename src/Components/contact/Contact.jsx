@@ -4,7 +4,7 @@ import Social_icon from "./Social_icon";
 import { Parallax } from "react-parallax";
 const Contact = () => {
   return (
-    <Parallax className="image" strength={200} bgImage="/assets/bg1.png">
+    <Parallax className="image" style={{height:"100vh"}} strength={200} bgImage="https://media.istockphoto.com/photos/black-dark-and-gray-abstract-cement-wall-and-studio-room-gradient-picture-id916098024?k=20&m=916098024&s=612x612&w=0&h=EFbEaYuUEzfQU_cmWuDO4nmQliyer_S1kJetBRIbczw=">
 
     <section id="contact">
         <h2 >Let's Talk</h2>

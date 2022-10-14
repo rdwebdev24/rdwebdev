@@ -27,16 +27,17 @@ const Projects = () => {
 
   const [imageIndex,setImageIndex] = useState(0);
   const [slides,setSlides] = useState(3);
-
   useEffect(()=>{
-    window.addEventListener('resize',()=>{
-      if(window.innerWidth<=600){
-        setSlides(1)
-      }
-      if(window.innerWidth>600){
+    const windoWidth = document.body.getBoundingClientRect().width;
+      if(windoWidth>=768){
         setSlides(3)
       }
-    })
+      if(windoWidth<768 && windoWidth>=600){
+        setSlides(2)
+      }
+      if(windoWidth<600){
+        setSlides(1)
+      }
   })
   
   
@@ -77,7 +78,7 @@ const handleLeave = (idx)=>{
 
 
   return (
-    <Parallax className='image' bgImage='/assets/bg2.png' strength={200}>
+    <Parallax className='image project_paralex' bgImage='https://media.istockphoto.com/photos/black-brick-wall-picture-id1324275828?b=1&k=20&m=1324275828&s=170667a&w=0&h=ZM6xFbD4UCIMSJGvWY8emce_faY6qgnPQSb4Yq4GRv8=' strength={200}>
 
       <section id='project'>
         <h5>My Work</h5>

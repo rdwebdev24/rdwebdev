@@ -2,7 +2,7 @@ const AboutData = [
      {
           id:1,
           title:"About",
-          info:"Hello ! I am Rohit Dhakad (enthusiastic 😂) Frontend Developer, Quick Leanner and still on the way to sharpen my frontend skills, wish me Luck 💙😊",
+          info:" some of them are : E-commerce , Hotel Booking , 2D game websites some with the use of React etc...",
      },
      {
           id:2,
@@ -12,7 +12,7 @@ const AboutData = [
      {
           id:3,
           title:"Website",
-          info:" some of them are : E-commerce , Hotel Booking , 2D game websites some with the use of React etc...",
+          info:"Hello ! I am Rohit Dhakad (enthusiastic 😂) Frontend Developer, Quick Leanner and still on the way to sharpen my frontend skills, wish me Luck 💙😊",
      },
 ]
 

@@ -1,5 +1,6 @@
 #experience{
      padding: 1.5rem 0;
+     margin-top: 3rem;
      /* clip-path: polygon(0 60%, 0 0, 100% 0, 100% 60%, 50% 85%); */
      /* background-image: linear-gradient(to top, #2c2c6c, #194988, #0066a0, #0082b2, #0b9ec0); */
 }
@@ -11,18 +12,12 @@
 }
 
 .experience_container > div{
-     
-     background: var(--color-bg-variant);
+     background: #48494ab8;
      padding: 2.4rem 5rem;
      border-radius: 1rem;
      border: 1px solid transparent;
      transition: var(--transition);
      margin: 0 1.5rem;
-     /* -webkit-border-radius: 50px;
-border-radius: 50px;
-background: #1f1f38;
--webkit-box-shadow: 12px 12px 24px #1a1a30, -12px -12px 24px #242440;
-box-shadow: 12px 12px 24px #1a1a30, -12px -12px 24px #242440; */
 }
 .experience_container > div:hover{
      background: transparent;
@@ -64,7 +59,7 @@ box-shadow: 12px 12px 24px #1a1a30, -12px -12px 24px #242440; */
      }
      .experience_container > div{
           margin: 1.5rem 0;
-          width: 80%;
+          width: 100%;
      }
  }
  /*=================  MEDIA QUERIES (SMALLER DEVICEC )================*/

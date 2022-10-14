@@ -11,10 +11,9 @@
   margin:auto;
 }
 .arrow {
-  color: black;
   font-size: 2rem;
   padding: 0.8rem 1.5rem;
-  border-radius: 50%;
+  border-radius: 10%;
   background-color: var(--color-bg-variant);
   color: #fff;
   position: absolute;
@@ -22,10 +21,14 @@
   z-index: 10;
   border: 1px solid transparent;
   transition: all 0.3s ease-in;
+  background-color: transparent;
 }
 .arrow:hover{
   background-color: var(--color-bg);
   border: 1px solid #58ff4d;
+}
+.arrow svg{
+  font-size: 4rem !important;
 }
 
 .next {
@@ -110,6 +113,10 @@ cursor: pointer;
   margin-bottom: 1rem;
 }
 
+.project_paralex{
+  height: 100vh !important;
+}
+
 /*=================  MEDIA QUERIES (MEDIUM DEVICEC )================*/
 @media screen and (max-width: 1024px) {
   #project {
@@ -129,5 +136,8 @@ cursor: pointer;
   }
   .arrow {
     font-size: 1.5rem;
+  }
+  .project_paralex{
+    height: 100vh !important;
   }
 }

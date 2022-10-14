@@ -1,3 +1,91 @@
+.slider-container{
+   position: relative;
+   overflow: hidden;
+   width: 100vw;
+   height: 70vh;
+}
+
+.left-slide{
+   height: 100%;
+   width: 35%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   transition: transform 0.5s ease-in-out;
+}
+
+.left-slide > div{
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color-scheme: #fff;
+}
+.left-slide div:nth-child(2n){
+   background-color: #1c1c1c82;
+}
+.right-slide{
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 35%;
+   width: 65%;
+   transition: transform 0.5s ease-in-out;
+}
+.right-slide div:nth-child(2n+1){
+   background-color: #1c1c1c82;
+}
+.sliderPara{
+   max-width: 75%;
+}
+.right-slide > div{
+   padding: 0 10rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100% ;
+   font-size: 2rem;
+   width: 100%;
+}
+
+button{
+   border: none;
+   cursor: pointer;
+   font-size: 16ps;
+   padding: 15px;
+}
+
+button:hover{
+   color: #222;
+}
+button:focus{
+   outline: none;
+}
+.slider-container .action-button button {
+   position: absolute;
+   left: 35%;
+   top: 50%;
+   z-index: 100;
+}
+.slider-container .action-button .down-button {
+   transform: translateX(-100%);
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+}
+.slider-container .action-button .up-button {
+   transform: translateY(-100%);
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+}
+.fas{
+   font-size: 2.5rem;
+   color: white;
+}
+
+/* new styles ends */
+
 #about {
   padding-top: 2rem;
   margin-top: 5rem;
@@ -57,4 +145,29 @@
 }
 .info{
   font-size: 1.5rem;
+}
+
+@media screen and (max-width:768px) {
+   .right-slide > div {
+      padding: 0 6rem;
+  }
+   .sliderPara{
+      max-width: 100%;
+   }
+   
+}
+@media screen and (max-width:425px) {
+   .left-slide > div h1{
+      font-size: 2.5rem;
+   }
+   .right-slide > div p{
+      font-size: 1.3rem;
+      padding: 0 0 0 2rem;
+   }
+   .right-slide > div{
+      padding: 0 1rem 0 3rem;
+   }
+   #about{
+      height: 80vh;
+   }
 }

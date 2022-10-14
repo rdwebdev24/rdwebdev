@@ -67,7 +67,7 @@ const Experience = () => {
 
   return (
     
-    <Parallax className='image'  bgImage="/assets/bg1.png"  strength={200}>
+    <Parallax className='image'  bgImage="https://media.istockphoto.com/photos/blackboard-chalkboard-background-picture-id528056452?b=1&k=20&m=528056452&s=170667a&w=0&h=OWfJw-T_a-Jnvs6RmOeQPSrONhJyc9oH0cH-n8Um1iE="  strength={200}>
        
     <section id="experience">
       {/* SLIDING CAROUSEL */}
